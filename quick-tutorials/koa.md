@@ -133,3 +133,5 @@ app.use(function *(next) {
 
 app.listen(3000);
 ```
+
+When a middleware hits a yield next, it will go to the next middleware and continue that where it was left off.
