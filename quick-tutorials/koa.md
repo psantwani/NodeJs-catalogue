@@ -109,3 +109,27 @@ co(function *() {
   console.log(yield [a, b]);
 })();
 ```
+
+# Koa Application
+
+```
+var koa = require('koa');
+var app = koa();
+app.use(function *(next) {
+  console.log('A');
+  yield next;
+  console.log('E');
+});
+
+app.use(function *(next) {
+  console.log('B');
+  yield next;
+  console.log('D');
+});
+
+app.use(function *(next) {
+  console.log('C');
+});
+
+app.listen(3000);
+```
