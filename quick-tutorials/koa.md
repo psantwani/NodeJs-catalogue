@@ -74,3 +74,38 @@ gen.next().value(function (err, data) {
   gen.next(data.toString());
 })
 ```
+
+# Co
+[Co](https://github.com/visionmedia/co) is a generator based flow control module.
+```
+var co = require('co');
+var thunkify = require('thunkify');
+var fs = require('fs');
+
+var read = thunkify(fs.readFile);
+
+co(function *bar () {
+  try {
+    var x = yield read('input.txt');
+  } catch (err) {
+    console.log(err);
+  }
+  console.log(x);
+})();
+```
+
+#### Concurrent executions
+```
+co(function *() {
+  var a = read('input.txt');
+  var b = read('input.txt');
+
+  // 2 concurrent reads
+  console.log([yield a, yield b]);
+
+  // or
+
+  // 2 concurrent reads
+  console.log(yield [a, b]);
+})();
+```
