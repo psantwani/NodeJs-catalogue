@@ -8,4 +8,4 @@
 # Tools
 1. ```helmet``` - Implements middlewares like csp, crossdomain, xframe, xssfilter, etc.
 2. ```npm shrinkwrap``` - Locks down dependency versions recursively
-3. ````retire.js``` - Detects module versions with vulnerabilties
+3. ```retire.js``` - Detects module versions with vulnerabilties
