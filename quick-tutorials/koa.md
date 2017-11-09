@@ -38,6 +38,17 @@ console.log(bar.next('B')); // { value: undefined, done: true }
 
 # Thunks
 Primarily they are used to assist a call to another function. They can be used to move node's callbacks from the argument list, outside in a function call. Use [thunkify](https://github.com/visionmedia/node-thunkify).
+
+```
+var read = function (file) {
+  return function (cb) {
+    require('fs').readFile(file, cb);
+  }
+}
+
+read('package.json')(function (err, str) { })
+```
+
 Steps
 - Convert function to a thunk and put it in generator
 - next() returns a function whose parameter is the callback of the thunkified function
