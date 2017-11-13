@@ -7,3 +7,4 @@
 - [Isomorphic JS and SEO](mini-blogs/isomorphic_js_and_seo.md)
 - [Node.Js in production](mini-blogs/node_in_production.md)
 - [Koa](quick-tutorials/koa.md)
+- [Testing](tips/testing.md)
