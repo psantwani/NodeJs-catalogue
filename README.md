@@ -10,4 +10,4 @@
 - [Testing](tips/testing.md)
 - [Building JS libraries](mini-blogs/third_party_javascript.md)
 - [Hapi](quick-tutorials/hapi.md)
-- [Functional Reactive Programming](mini-blogs/functional_reactive_programming)
+- [Functional Reactive Programming](mini-blogs/functional_reactive_programming.md)
