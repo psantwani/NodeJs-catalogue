@@ -10,3 +10,26 @@ _('click', $('#cats-btn'))
 ```
 
 Use [Highland](http://highlandjs.org/), [Bacon](https://github.com/baconjs/bacon.js/) to implement FRP in NodeJs.
+
+```
+var stream = require('stream');               
+var _ = require('highland');
+//Create a writeable stream
+var toConsole = new stream.Writable({
+  objectMode: true 
+});
+toConsole._write = function (data, encoding, done) {
+  console.log(data);
+  done();
+};
+//Random function
+function underThree (cat) {
+  return cat.age < 3;
+}
+_(catWS)
+  .map(JSON.parse)
+  .sequence()
+  .filter(underThree)
+  .map(util.format)
+  .pipe(toConsole);
+```
