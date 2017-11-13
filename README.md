@@ -9,3 +9,4 @@
 - [Koa](quick-tutorials/koa.md)
 - [Testing](tips/testing.md)
 - [Building JS libraries](mini-blogs/third_party_javascript.md)
+- [Hapi](quick-tutorials/hapi.md)
