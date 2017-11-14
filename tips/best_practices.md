@@ -5,3 +5,5 @@
 5. Use JS over JSON for configurations (more flexibility)
 6. ```var myModule = require('../../../../lib/myModule');``` can be written as ```require('myModule')``` using NODE_PATH like ```"start": "NODE_PATH=lib node index.js"``` script
 7. Dependency injection is really helpful when it comes to testing
+8. You should not try to listen with Node on port 80 - to do so you would need superuser rights, but thats not a good idea. Still if you want to run it, run your app on any port above 1024, then put a reverse proxy like nginx in front of it.
+9. Stubs to test - Stubs are functions/programs that simulate the behaviours of components/modules
