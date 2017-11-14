@@ -50,6 +50,7 @@ Expose GET /healthcheck in your app
 
 8. **VPNs and Private Networks** - 
 > A VPN, or virtual private network, is a way to create secure connections between remote computers and present the connection as if it were a local private network. This provides a way to configure your services as if they were on a private network and connect remote servers over secure connections. - Digital Ocean
+
 Once you are on a private network, your communication is secure and you only have to expose the interfaces that your clients need and no need to open up a port for Redis/Postgres, etc.
 
 9. **Log everything** - [Logstash](https://www.elastic.co/products/logstash)
