@@ -43,3 +43,17 @@ Expose GET /healthcheck in your app
 ```
 
 5. **Load balancing** - Use HAProxy or CDN with load balancing functionality. Use [keepalived](http://www.keepalived.org/) to avoid HAProxy becoming a single point of failure
+
+6. **Deployment** - Never do deployments manually. Use [Codeship](http://codeship.com/)(hosted solution) or [Jenkins](https://jenkins.io/) for a complex pipeline
+
+7. Use ```npm shrinkwrap``` to lock down the versions of a package's dependencies. Run the command before pushing your changes to production. ```nsp audit-shrinkwrap``` command to check for vulnerable modules.
+
+8. **VPNs and Private Networks** - 
+> A VPN, or virtual private network, is a way to create secure connections between remote computers and present the connection as if it were a local private network. This provides a way to configure your services as if they were on a private network and connect remote servers over secure connections. - Digital Ocean
+Once you are on a private network, your communication is secure and you only have to expose the interfaces that your clients need and no need to open up a port for Redis/Postgres, etc.
+
+9. **Log everything** - [Logstash](https://www.elastic.co/products/logstash)
+
+10. **Monitoring and Alerting** - Tools like Zabbix, New Relic, Monit, PagerDuty, etc.
+
+11. **Caching** - Cache everything, not just API caching, but on database level too. Why? Smaller load on servers -> cost-effective infra. Faster responses to clients -> happy users
