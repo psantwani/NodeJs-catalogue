@@ -13,3 +13,4 @@
 - [Functional Reactive Programming](mini-blogs/functional_reactive_programming.md)
 - [Dockerizing Node](mini-blogs/dockerizing_node.md)
 - [Design Patterns](mini-blogs/node_design_patterns.md)
+- [Async Journey](mini-blogs/async_journey.md)
