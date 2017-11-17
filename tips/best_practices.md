@@ -7,3 +7,4 @@
 7. Dependency injection is really helpful when it comes to testing
 8. You should not try to listen with Node on port 80 - to do so you would need superuser rights, but thats not a good idea. Still if you want to run it, run your app on any port above 1024, then put a reverse proxy like nginx in front of it.
 9. Stubs to test - Stubs are functions/programs that simulate the behaviours of components/modules
+10. Use [kraken.js](http://krakenjs.com/) to give your node.js express apps some extra arms

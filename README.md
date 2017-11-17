@@ -15,3 +15,4 @@
 - [Design Patterns](mini-blogs/node_design_patterns.md)
 - [Async Journey](mini-blogs/async_journey.md)
 - [Become a better node developer](tips/become_better_node_developer.md)
+- [API Documentation using Swagger](quick-tutorials/swagger_for_node.md)
