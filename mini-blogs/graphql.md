@@ -12,3 +12,4 @@ GraphQL is a query language created by Facebook which provides a common interfac
 8. With GraphQL mutation you can manipulate data. GraphQL uses GET for querying and POST for mutation.
 9. Caching in GET queries works the same as with the classic HTTP API.
 10. GraphQL can work on HTTP, websockets or even mqtt.
+11. [Grafitti](https://www.npmjs.com/package/@risingstack/graffiti) is a middleware using to model your existing models into GraphQL schema.

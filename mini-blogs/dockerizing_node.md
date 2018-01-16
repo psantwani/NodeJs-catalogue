@@ -23,3 +23,6 @@ Advantages of Immutable Infra -
 **Applications** - OS containers and application containers.
 **OS Containers** - Useful when you want to run a fleet of identical or different flavors of distros. Container technologies like LXC, OpenVZ, Linux VServer, BSD Jails and Solaris zones are all suitable for creating OS containers.
 **Application Containers** - Designed to run multiple processes and services. Docker and Rocket are examples.
+
+# Minimal Docker containers for Node.js
+Alpine based node containers - Alpine is a light-weight linux distribution. [This](https://hub.docker.com/r/risingstack/alpine/tags/) minimal docker image of alpine and nodejs is only 90MB.
