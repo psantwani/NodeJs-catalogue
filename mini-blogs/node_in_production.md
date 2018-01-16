@@ -58,3 +58,9 @@ Once you are on a private network, your communication is secure and you only hav
 10. **Monitoring and Alerting** - Tools like Zabbix, New Relic, Monit, PagerDuty, etc.
 
 11. **Caching** - Cache everything, not just API caching, but on database level too. Why? Smaller load on servers -> cost-effective infra. Faster responses to clients -> happy users
+
+12. Makes development faster and increases productivity, thanks to more than 230k NPM modules available for instant use.
+
+13. High scalability - Less investment in infrastructure, since we can handle same amount of load with lesser hardware.
+
+14. Each release is maintained for 30 months.

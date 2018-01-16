@@ -8,7 +8,7 @@ Major version change: API change is not backward compatible.
 Minor version change: Few new features added, but API change is backward compatible.
 Patch version change: Bug fixes.
 
-# The 12 factor application 
+# The 12 factor application in building web apps
 - One codebase tracked in revision control
 - Explicitly declare and isolate dependencies
 - Store config in the environment
