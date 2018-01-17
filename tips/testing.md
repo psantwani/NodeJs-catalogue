@@ -63,3 +63,31 @@ pacakge.json script to use instanbul with mocha
 ```
 istanbul cover _mocha $(find ./lib -name \"*.spec.js\" -not -path \"./node_modules/*\")
 ```
+
+# Logging
+1. Debug module
+Code: 
+```
+const debug = require('debug')('my-namespace')
+const name = 'my-app'
+debug('booting %s', name)
+```
+Script:
+```DEBUG=my-namespace node app.js```
+Debugging multiple modules:
+```DEBUG=my-namespace,express* node app.js```
+
+2. Logging for applications using winston or bunyan.
+```
+const winston = require('winston')
+
+winston.log('info', 'Hello log files!', {
+  someKey: 'some-value'
+})
+```
+
+3. Use [trace](https://trace.risingstack.com/) when logging in distributed systems. We have to use correlation identifiers in distributed systems.
+```
+const uuid = require('uuid')
+const id = uuid.v1()
+```
