@@ -17,3 +17,4 @@
 - [Become a better node developer](tips/become_better_node_developer.md)
 - [API Documentation using Swagger](quick-tutorials/swagger_for_node.md)
 - [GraphQL](mini-blogs/graphql.md)
+- [Best practices in React](tips/best_practices_react.md)

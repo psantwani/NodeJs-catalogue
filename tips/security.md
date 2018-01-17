@@ -22,6 +22,7 @@ nmap --script ssl-cert,ssl-enum-ciphers -p 443,465,993,995 www.example.com
 ```
 ./sslyze.py --regular example.com:443
 ```
+10. Use ```node-inspector``` to debug node.js in chrome. Then use ```node-debug index.js --debug-brk```. Use watchers to watch expressions and variable values during debugging. eg. ```watch('expression')``` and ```unwatch('expression')```
 
 # Security HTTP Headers
 1. ```Strict-Transport-Security```: enforces secure(HTTP over SSL) connections to the server
