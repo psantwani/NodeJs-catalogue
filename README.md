@@ -24,3 +24,4 @@
 - [Interview Questions](mini-blogs/interview_questions.md)
 - [Monitoring Node.js apps](mini-blogs/monitoring_node_apps.md)
 - [Core modules](mini-blogs/core_modules.md)
+- [Microservices 101](mini-blogs/microservices_101.md)
