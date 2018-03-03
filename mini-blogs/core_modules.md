@@ -28,7 +28,7 @@ fs.createReadStream('original.txt.gz')
   .pipe(fs.createWriteStream('original.txt'))
 ```
 
-# fs.access
+## fs.access
 Used to check if a user have permissions for the given file or path.
 1. fs.constants.F_OK - to check if the path is visible to the calling process,
 2. fs.constants.R_OK - to check if the path can be read by the process,
