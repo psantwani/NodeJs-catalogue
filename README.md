@@ -11,7 +11,7 @@
 - [Building JS libraries](mini-blogs/third_party_javascript.md)
 - [Hapi](quick-tutorials/hapi.md)
 - [Functional Reactive Programming](mini-blogs/functional_reactive_programming.md)
-- [Dockerizing Node](mini-blogs/dockerizing_node.md)
+- [Dockerizing Node and Kubernetes](mini-blogs/dockerizing_node.md)
 - [Design Patterns](mini-blogs/node_design_patterns.md)
 - [Async Journey](mini-blogs/async_journey.md)
 - [Become a better node developer](tips/become_better_node_developer.md)
