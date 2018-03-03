@@ -23,3 +23,4 @@
 - [Writing APIs](tips/writing_APIs.md)
 - [Interview Questions](mini-blogs/interview_questions.md)
 - [Monitoring Node.js apps](mini-blogs/monitoring_node_apps.md)
+- [Core modules](mini-blogs/core_modules.md)
