@@ -22,3 +22,17 @@ Patch version change: Bug fixes.
 - Treat logs as event streams
 - Run admin/management tasks as one-off processes
 Read more about each [here](https://12factor.net/codebase)
+
+7. Get acquainted with import and import() - They are natively supported since version 8.5 behind the --experimental-modules flag
+8. Get familiar with HTTP/2 - Available since v8.8 without a flag. It has server push and multiplexing, which paves way for efficient native module loading in browsers.
+9. mark and measure - Node v8.5. To measure event loop duration.
+```
+const { performance } = require('perf_hooks')
+performance.mark('A')
+setTimeout(() => {
+  performance.mark('B')
+  performance.measure('A to B', 'A', 'B')
+  const entry = performance.getEntriesByName('A to B', 'measure')
+  console.log(entry.duration)
+}, 10000)
+```
