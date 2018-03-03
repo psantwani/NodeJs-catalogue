@@ -20,3 +20,4 @@
 - [Best practices in React](tips/best_practices_react.md)
 - [Web Authentication](quick-tutorials/web_authentication.md)
 - [Project Structure](tips/project_structure.md)
+- [Writing APIs](tips/writing_APIs.md)
