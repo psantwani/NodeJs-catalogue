@@ -13,3 +13,4 @@ GraphQL is a query language created by Facebook which provides a common interfac
 9. Caching in GET queries works the same as with the classic HTTP API.
 10. GraphQL can work on HTTP, websockets or even mqtt.
 11. [Grafitti](https://www.npmjs.com/package/@risingstack/graffiti) is a middleware using to model your existing models into GraphQL schema.
+12. How to use Grafitti with existing mongoose schema - [read](https://blog.risingstack.com/graffiti-mongoose-mongodb-for-graphql/)
