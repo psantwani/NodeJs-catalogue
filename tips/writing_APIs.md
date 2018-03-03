@@ -79,3 +79,64 @@ To tell API users how many requests they have left, set the following headers
 # API documentation
 [API blueprint](https://apiblueprint.org/)
 [Swagger](http://swagger.io/)
+
+# Understanding and Measuring HTTP timings
+
+SSL/TLS: TLS is a cryptographic protocol that provides communications security over a computer network. SSL (Secure Sockets Layer) is a deprecated predecessor to TLS.
+
+Timeline of a usual HTTP request-
+Sum of the following - 
+1. DNS Lookup : Every new domain requires a full round trip to do a DNS lookup.
+2. TCP Connection: Time to establish TCP between source and destination host. A proper multi-step handshake process.
+3. TLS handshake: During this time, the handshake process endpoints exchange authentication and keys to establish or resume secure sessions. There is no TLS handshake in a not HTTPS request
+4. Time to First Byte (TTFB): Time spent waiting for initial response. Includes the latency of a round trip to the server + time spent waiting for the server to process the request and deliver the reponse.
+5. Content transfer: Time spent receiving response data.
+
+More time taken by 
+1. DNS Lookup means issue with the DNS provider or with DNS cache settings
+2. TTFB means you should check latency between 2 endpoints, also the current payload on the server
+3. Content Transfer means ineffecient body response or slow n/w connections.
+
+```
+ const timings = {
+    // use process.hrtime() as it's not a subject of clock drift
+    startAt: process.hrtime(),
+    dnsLookupAt: undefined,
+    tcpConnectionAt: undefined,
+    tlsHandshakeAt: undefined,
+    firstByteAt: undefined,
+    endAt: undefined
+  }
+
+  const req = http.request({ ... }, (res) => {
+    res.once('readable', () => {
+      timings.firstByteAt = process.hrtime()
+    })
+    res.on('data', (chunk) => { responseBody += chunk })
+    res.on('end', () => {
+      timings.endAt = process.hrtime()
+    })
+  })
+  req.on('socket', (socket) => {
+    socket.on('lookup', () => {
+      timings.dnsLookupAt = process.hrtime()
+    })
+    socket.on('connect', () => {
+      timings.tcpConnectionAt = process.hrtime()
+    })
+    socket.on('secureConnect', () => {
+      timings.tlsHandshakeAt = process.hrtime()
+    })
+  }) 
+  ```
+
+  Use time parameter in request module
+  ```
+  request({
+  uri: 'https://risingstack.com',
+  method: 'GET',
+  time: true
+}, (err, resp) => {
+  console.log(err || resp.timings)
+})
+```
