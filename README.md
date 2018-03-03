@@ -18,3 +18,4 @@
 - [API Documentation using Swagger](quick-tutorials/swagger_for_node.md)
 - [GraphQL](mini-blogs/graphql.md)
 - [Best practices in React](tips/best_practices_react.md)
+- [Web Authentication](quick-tutorials/web_authentication.md)
