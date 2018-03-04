@@ -1,3 +1,9 @@
+# Problem with Async
+Node.js itself is single threaded, but some tasks can run parallelly - thanks to its asynchronous nature.
+
+But what does running parallelly mean in practice?
+Since we program a single threaded VM, it is essential that we do not block execution by waiting for I/O, but handle them concurrently with the help of Node.js's event driven APIs.
+
 ## Async JS
 Achieved by higher order functions (pass function as a param to a function).
 
