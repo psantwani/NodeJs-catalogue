@@ -26,3 +26,4 @@
 - [Core modules](mini-blogs/core_modules.md)
 - [Microservices 101](mini-blogs/microservices_101.md)
 - [HTTP/2 Push](mini-blogs/http_2_server_push.md)
+- [Concurrency and Parallelism]](mini-blogs/concurrency_parallelism.md)
