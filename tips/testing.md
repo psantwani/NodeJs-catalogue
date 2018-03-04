@@ -91,3 +91,19 @@ winston.log('info', 'Hello log files!', {
 const uuid = require('uuid')
 const id = uuid.v1()
 ```
+
+# TDD
+You dont write tests for yourself. You write them for those who make changes later. Test driven development is a methodology for writing the tests first for a given module and for the actual implementation afterward. 
+3 Steps -
+a. writing failing tests
+b. writing code that satisfies our tests
+c. refactor.
+
+Test Runner: Mocha
+Assertions: Chai
+Stubs/Mocks: Sinon
+Utilities:
+Chai-as-Promised
+Sinon-Chai
+
+Step by step use cases [here](https://blog.risingstack.com/getting-node-js-testing-and-tdd-right-node-js-at-scale/)
