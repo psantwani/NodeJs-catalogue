@@ -1,0 +1,12 @@
+# Problem
+Most of the backends behind websites don’t need to do complicated computations. Our programs spend most of their time waiting for the disk to read & write , or waiting for the wire to transmit our message and send back the answer. IO operations can be orders of magnitude slower than data processing.
+
+# Solution
+```Trivia - setTimeout(someFunction, 0) isn’t the same as simply calling someFunction immediately.```
+Stack - Whenever you call a functions return address, parameters and local variables will be pushed to the stack. If you call another function from the currently running function, its contents will be pushed on top in the same manner as the previous one - with its return address.
+```Note:  Local variables are popped from the stack when the functions execution finishes. It happens only when you work with simple values such as numbers, strings and booleans. Values of objects, arrays and such are stored in the heap and your variable is merely a pointer to them. If you pass on this variable, you will only pass the said pointer, making these values mutable in different stack frames. When the function is popped from the stack, only the pointer to the Object gets popped with leaving the actual value in the heap. The garbage collector is the guy who takes care of freeing up space once the objects outlived their usefulness.```
+
+Even though V8 is single-threaded, the underlying C++ API of Node isn't. It means that whenever we call something that is a non-blocking operation, Node will call some code ( part of libuv, a open source library that handles the thread-pool) that will run concurrently with our javascript code under the hood. Once this hiding thread receives the value it awaits for or throws an error, the provided callback will be called with the necessary parameters.
+
+# Task queue
+Javascript is a single-threaded, event-driven language. This means that we can attach listeners to events, and when a said event fires, the listener executes the callback we provided. Node.js sends IO operations to different threads so v8 can keep executing our code. The limbo where callbacks are waiting for their turn to be executed is called the task queue (or event queue, or message queue). Callbacks are being called in an infinite loop whenever the main thread has finished its previous task, hence the name 'event loop'.
