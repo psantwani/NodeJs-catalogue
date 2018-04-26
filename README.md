@@ -28,3 +28,4 @@
 - [Concurrency and Parallelism](mini-blogs/concurrency_parallelism.md)
 - [Garbage collection](mini-blogs/garbage_collection.md)
 - [Event loop](mini-blogs/event_loop.md)
+- [System Design Introduction](tips/system_design_intro.md)
